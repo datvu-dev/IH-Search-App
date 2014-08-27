@@ -1,4 +1,4 @@
-  </div><!-- .main_wrapper -->
+  </div><!-- .main_wrapper --> this is the test
 	
 	<?php if (gt3_get_theme_option("footer_widgets_area") == "on") { ?>
     <div class="pre_footer">
