@@ -1,0 +1,119 @@
+#dvLoading{
+    background:#fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;    
+    /*opacity: 0.9;*/
+
+   /*margin: -25px 0 0 -25px;*/
+  }
+  #dvLoading img {
+    width: 170px;
+    position:relative;
+    top: 32%;
+    left: -2%;
+  }
+  #dvLoading span {
+    position:relative;
+    top: 37%;
+    left: -2%;
+  }
+.header_wrapper {
+    z-index: 9999;
+    position:absolute;
+    width: 100% !important;
+    left: 0;
+  }
+
+.span12 {
+	width: 1170px;
+}
+
+.container{
+	width: 1170px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.filter-subtitle {
+	float:left;
+}
+
+.search_form form#ih_search_form .clearable {    
+    background-color: white;
+    background-image: url('img/icon/cross_search.jpg'); 
+    background-repeat: no-repeat;
+    background-position: 105% 50%;    
+}
+
+
+.search-slider {
+  margin-left: 0px !important;
+  clear: both;
+}
+
+.search-slider input {
+	padding: 3px 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+	display:inline;
+  width: 35px;
+}
+.grid_wrap {
+  position: relative;
+}
+.full_expand {
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.full_expand .hide-text {
+  display: inline !important;
+  text-indent: 10% !important;
+  line-height: 50px;
+  position:relative;
+  top: -10px;
+}
+
+.antibody_wrap {
+  display:inline-block;
+}
+
+.blood_group_name {
+  line-height: 27px !important;
+  display: inline-block;
+}
+
+.blood_group_name .icon-right-arrow {
+  display: none !important;
+}
+.icon-right-arrow .hide-text {
+  font-family:"Arial Unicode MS",Helvetica,sans-serif !important;
+}
+.blood_group_name span {
+  display: inline;
+  position:absolute;
+  top:2px;
+}
+
+.blood_group_name .hide-text {
+  display:inline !important;
+  text-indent: 5% !important;
+  font-size: 40px;   
+  line-height: 25px;
+  position: absolute;
+  right: 3px;
+}
+
+.antibody_outer_wrap .blood_group_name .hide-text, .antibody_other_outer_wrap .blood_group_name .hide-text {
+  color: #ec1a3f;
+}
+
+.antigen_outer_wrap .blood_group_name .hide-text, .antigen_other_outer_wrap .blood_group_name .hide-text {
+  color: #00A79D;
+}

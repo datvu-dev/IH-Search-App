@@ -1,0 +1,8 @@
+div.clear{clear: both;}
+header.fixed_menu.fixed_showed{display: none;}
+.singleElement.sub-active{display: none;}
+.exp_disp, .exp_disp .subwrap{display: block; clear: both; position: relative; height: auto;}
+.ie-display,.exp_disp .full_expand{display: none;}
+.ie-display{margin-bottom: 40px;}
+.grid_wrap{margin-right: 25px; width: 30%;}
+.exp_disp .blood_group_attr{overflow-y: scroll; }

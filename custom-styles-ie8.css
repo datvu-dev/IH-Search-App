@@ -1,0 +1,142 @@
+.header_wrapper {
+    z-index: 9999;
+    position:absolute;
+    width: 100% !important;
+}
+#dvLoading{    
+    background:#fff;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;    
+    /*opacity: 0.9;*/
+
+   /*margin: -25px 0 0 -25px;*/
+  }
+  #dvLoading span {
+    position:relative;
+    top: 37%;
+    left: -2%;
+  }
+  #dvLoading img {
+    width: 170px;
+    position:relative;
+    top: 32%;
+    left: -2%;
+  }
+.search_form form#ih_search_form #advance_search,
+.advance_search h6,
+.def_header h1,
+.blood_grp_hero_name h1,
+.isbt_root h4 {
+  font-weight: bold;
+}
+.content_block .search_form_wrap {
+	width: 60% !important;
+  min-height: 20px !important;
+	float: none !important;
+}
+.search_form form#ih_search_form #submit_search{
+    background-image: url('img/icon/search_ie.png');
+}
+.icon-right-arrow:before {
+	display: none;
+}
+.full_expand {
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.antibody_root_wrap .full_expand .hide-text, .antigen_root_wrap .full_expand .hide-text {
+  display: inline !important;
+  text-indent: 10% !important;
+  line-height: 50px;
+  position:relative;
+  top: -30px;
+}
+
+.antibody_other_root_wrap .full_expand .hide-text, .antigen_other_root_wrap .full_expand .hide-text {
+  display: inline !important;
+  text-indent: 10% !important;
+  line-height: 50px;
+  position:relative;
+  top: -33px;
+}
+
+.blood_group_name .icon-right-arrow {
+  display: none !important;
+}
+.icon-right-arrow .hide-text {
+  font-family:"Arial Unicode MS",Helvetica,sans-serif !important;
+}
+.blood_group_name span {
+  /*float: left;*/
+  position: relative;   
+  width: 100%;  
+  margin-right: 10px;
+  /*position:absolute;  */
+}
+
+.singleElement .blood_group_name .hide-text {
+  display:none;  
+}
+.oversized .blood_group_name {
+  padding-right: 20px;
+  background-position: 100% 55%;
+}
+.expanded .singleElement, .expand4 .singleElement {
+  width: 22% !important;
+}
+.expanded .singleElement .blood_group_name, .expand4 .singleElement .blood_group_name {
+  
+}
+.expanded .singleElement .blood_group_name span, .expand4 .singleElement .blood_group_name span {
+  display: inline-block;
+  width: 88%;
+  line-height: 5px;
+  top:-5px;
+}
+.expanded .singleElement .blood_group_name .hide-text, .expand4 .singleElement .blood_group_name .hide-text {
+  display: inline !important;
+  font-size: 40px;
+  line-height: 27px;
+}
+
+.expanded .sub_antibody_wrap .singleElement .blood_group_name .hide-text, .expand4 .sub_antibody_wrap .singleElement .blood_group_name .hide-text {
+  color: #ec1a3f;
+}
+.expanded .sub_antigen_wrap .singleElement .blood_group_name .hide-text, .expand4 .sub_antigen_wrap .singleElement .blood_group_name .hide-text {
+  color: #00A79D;
+}
+.antibody_outer_wrap .blood_group_name, .antibody_other_outer_wrap .blood_group_name{
+  background-image: url('img/icon/arrow_right_small_red.png');
+  background-repeat: no-repeat;
+  background-position: 93% 55%;
+}
+
+.antigen_outer_wrap .blood_group_name, .antigen_other_outer_wrap .blood_group_name {
+  background-image: url('img/icon/arrow_right_small_green.png');
+  background-repeat: no-repeat;
+  background-position: 93% 55%;
+}
+
+span.icon_clear {
+  right: 180px;
+  top: 25px;
+  
+}
+.search_form form#ih_search_form select#search_option {
+  width: 123%;
+  padding: 10.7px;
+}
+.search_form form#ih_search_form div.search-select-antibody select#search_option {
+  background-image: url('img/icon/arrow_down_small_red_ie.jpg');
+}
+.search_form form#ih_search_form div.search-select-antigen select#search_option {
+  background-image: url('img/icon/arrow_down_small_green_ie.jpg');
+}
+.pre_footer .footer-block p, .pre_footer .glossary strong, .pre_footer .glossary span {
+  font-size: 14px;
+}

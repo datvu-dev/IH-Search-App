@@ -1,0 +1,232 @@
+var full_width = '75%';
+var half_width = '50%';
+var quat_width = '25%';
+var basic_height = '750px';
+var reset_height = '200px';
+
+jQuery(document).ready(function(){
+
+/* SHORTCODE TABS */
+jQuery('.shortcode_tabs').each(function(index) {
+/* GET ALL HEADERS */
+var i = 1;
+jQuery(this).find('.shortcode_tab_item_title').each(function(index) {
+jQuery(this).addClass('it'+i); jQuery(this).attr('whatopen', 'body'+i);
+jQuery(this).addClass('head'+i);
+// jQuery(this).parents('.shortcode_tabs').find('.all_heads_cont').append(this);
+i++;
+});
+/* GET ALL BODY */
+var i = 1;
+jQuery(this).find('.shortcode_tab_item_body').each(function(index) {
+jQuery(this).addClass('body'+i);
+jQuery(this).addClass('it'+i);
+// jQuery(this).parents('.shortcode_tabs').find('.all_body_cont').append(this);
+i++;
+});
+/* OPEN ON START */
+jQuery(this).find('.expand_yes').addClass('active');
+var whatopenOnStart = jQuery(this).find('.expand_yes').attr('whatopen');
+jQuery(this).find('.'+whatopenOnStart).addClass('active');
+});
+jQuery(document).on('click', '.shortcode_tab_item_title', function(){
+jQuery(this).parents('.shortcode_tabs').find('.shortcode_tab_item_body').removeClass('active');
+jQuery(this).parents('.shortcode_tabs').find('.shortcode_tab_item_title').removeClass('active');
+var whatopen = jQuery(this).attr('whatopen');
+jQuery(this).parents('.shortcode_tabs').find('.'+whatopen).addClass('active');
+jQuery(this).addClass('active');
+
+ if (jQuery('.antigen_root_wrap').hasClass('active')) {
+   jQuery('.def_header').removeClass('antibody').addClass('antigen');
+   jQuery('.antigen_root_wrap').isotope('layout');
+ }else
+ {
+   jQuery('.def_header').removeClass('antigen').addClass('antibody');
+   jQuery('.antibody_root_wrap').isotope('layout');
+ }
+
+
+
+});
+/* END SHORTCODE TABS */ 
+
+});
+
+
+
+jQuery(document).ready(function(){
+
+var $container = jQuery('#isotope_container');
+// init
+$container.isotope({
+  // options
+  itemSelector: '.item',
+  transitionDuration: '0.7s',
+  layoutMode: 'masonry',
+  // layoutMode: 'fitRows',
+  masonry: {
+    gutter:15,
+    // rowHeight:'.grid_spacer',
+     columnWidth:'.grid_spacer'
+  }
+});
+	
+//on click
+
+  $container.on( 'click', '.item .full', function() {
+    // change size of item by toggling gigante class
+    jQuery( this).parent('.item').toggleClass('expand2 expand_height');
+    $container.isotope('layout');
+  });
+
+$container.on( 'click', '.item .single', function() {
+    // change size of item by toggling gigante class
+    jQuery( this ).parent('.item').toggleClass('expand_height');
+    $container.isotope('layout');
+  });
+
+	
+  var $antibody = jQuery('.antibody_root_wrap');
+
+$antibody.isotope({
+  // options
+  itemSelector: '.antibody_outer_wrap',
+  transitionDuration: '0.7s',
+  layoutMode: 'masonry',
+  // layoutMode: 'fitRows',
+  masonry: {
+    gutter:15,
+    // rowHeight:'.grid_spacer',
+     columnWidth:'.grid_spacer'
+  }
+});
+
+
+ var $antigen = jQuery('.antigen_root_wrap');
+ $antigen.isotope({
+  // options
+  itemSelector: '.antigen_outer_wrap',
+  transitionDuration: '0.7s',
+  layoutMode: 'masonry',
+  // layoutMode: 'fitRows',
+  masonry: {
+    gutter:15,
+    // rowHeight:'.grid_spacer',
+     columnWidth:'.grid_spacer'
+  }
+});
+
+
+registerClickFunctions();
+
+assignTopPositionSubWrapper();
+  });
+function assignTopPositionSubWrapper(){
+  jQuery('.sub_antibody_wrap').each(function(){
+
+$this = jQuery(this);
+if (!$this.parents('.antibody_outer_wrap').hasClass('active') && !$this.parents('.antibody_outer_wrap').hasClass('expanded')) {
+  children = $this.children().length;
+  if (children < 10) {
+      //pos = children/4;
+
+      if(children <= 4)//one line of antigens
+      {
+      $this.css('top','37%');
+      }
+      else if (children <= 8) { //two lines of anigens
+        $this.css('top','18%');
+      };
+  }
+}else{
+  $this.css('top','0');
+}
+});
+}
+
+function registerClickFunctions(){
+  var $antibody = jQuery('.antibody_root_wrap');
+jQuery('.blood_group_name').click(function(){
+
+$this= jQuery(this).parents('.antibody_wrap');
+parent = $this.parents('.antibody_outer_wrap');
+
+if (!disableOtherActive(parent)) {
+parent.toggleClass('expand_height').toggleClass('active');
+parent.find('.disp_name').toggleClass('visible').html($this.find('.blood_group_name').html());
+parent.find('.disp_text').toggleClass('visible').html($this.find('.blood_group_attr').html());
+}
+else
+{
+  parent.find('.disp_name').html($this.find('.blood_group_name').html());
+parent.find('.disp_text').html($this.find('.blood_group_attr').html());
+}
+
+
+
+
+assignTopPositionSubWrapper();
+$antibody.isotope('layout');
+
+//$this.find('.blood_group_attr').toggleClass('full_width').slideToggle(500);
+//console.log('relaout')
+});
+
+jQuery('.close_all').click(function(e){
+e.stopPropagation();
+if (jQuery('.antibody_root_wrap').find('.antibody_outer_wrap.expand4').length>0){
+  close_other_wrappers();
+}
+$antibody = jQuery('.antibody_root_wrap');
+$antibody.find('.antibody_outer_wrap.active').toggleClass('active').toggleClass('expand_height').find('.disp_name,.disp_text').toggleClass('visible');
+assignTopPositionSubWrapper();
+
+$antibody.isotope('layout');
+return false;
+});
+
+jQuery('.full_expand').click(function(e){
+e.stopPropagation();
+$this = jQuery(this);
+$antibody = jQuery('.antibody_root_wrap');
+close_other_wrappers();
+parent = $this.parents('.antibody_outer_wrap').toggleClass('expand4 expanded');
+toggle_sub_divs(parent);
+assignTopPositionSubWrapper();
+
+$antibody.isotope('layout');
+return false;
+});
+
+}
+function toggle_sub_divs(parent){
+parent.find('.blood_group_attr').toggleClass('quad_width');
+}
+ 
+function disableOtherActive(parent){
+  if(parent.hasClass('active')){
+    
+    return parent.hasClass('active');
+  }
+  else
+  {
+    
+    close_other_wrappers();
+     return false;
+
+  }
+
+}
+
+  function close_other_wrappers(){
+    if (jQuery('.antibody_root_wrap').find('.antibody_outer_wrap.active').length>0) {
+      jQuery('.antibody_root_wrap').find('.antibody_outer_wrap.active').toggleClass('active').toggleClass('expand_height').find('.disp_name,.disp_text').toggleClass('visible');
+      
+     }
+     else if (jQuery('.antibody_root_wrap').find('.antibody_outer_wrap.expand4').length>0) {
+     parent = jQuery('.antibody_root_wrap').find('.antibody_outer_wrap.expand4').toggleClass('expand4 expanded');
+
+      toggle_sub_divs(parent);
+     };
+  }
+

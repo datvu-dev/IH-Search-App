@@ -1,0 +1,662 @@
+/*IE8*/
+.ie8 header .menu > li:before {
+	visibility:hidden;
+}
+.ie8 header .menu > li.current-menu-parent:before,
+.ie8 header .menu > li.current-menu-item:before {
+	visibility:visible;
+}
+.ie8 .searchbox_wrapper {
+	visibility:hidden;
+}
+.ie8 .header_wrapper.search_show .searchbox_wrapper {
+	visibility:visible;
+}
+.ie8 .searchbox_wrapper input {
+	height:38px!important;
+	line-height:38px!important;
+	padding:0 16px 0 16px!important;
+}
+.ie8 .header_wrapper.search_show nav {
+	display:none;
+}
+.ie8 .shortcode_button.btn_type1:before {
+	filter:alpha(opacity=40);
+}
+.ie8 .shortcode_button.btn_type2:before {
+	filter:alpha(opacity=20);
+}
+.ie8 .shortcode_button.btn_type3:before,
+.ie8 .shortcode_button.btn_type4:before {
+	filter:alpha(opacity=10);
+}
+.ie8 .shortcode_button.btn_type5:before,
+.ie8 .shortcode_button.btn_type6:before,
+.ie8 .shortcode_button.btn_type7:before,
+.ie8 .shortcode_button.btn_type8:before {
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+}
+.ie8 .shortcode_button.btn_type9:before {
+	filter:alpha(opacity=10);
+}
+.ie8 .shortcode_button.btn_type10:before,
+.ie8 .shortcode_button.btn_type11:before,
+.ie8 .shortcode_button.btn_type12:before,
+.ie8 .shortcode_button.btn_type13:before {
+	filter:alpha(opacity=20);
+}
+.ie8 .shortcode_button.btn_type14:before {
+	filter:alpha(opacity=30);
+}
+.ie8 .shortcode_button.btn_type15:before {
+	filter:alpha(opacity=40);
+}
+.ie8 .shortcode_button.btn_type16:before {
+	filter:alpha(opacity=30);
+}
+.ie8 .shortcode_button.btn_type17:before {
+	filter:alpha(opacity=20);
+}
+.ie8 .shortcode_button.btn_type1:hover:before {
+	filter:alpha(opacity=20)!important;
+}
+.ie8 .shortcode_button:hover:before {
+	filter:alpha(opacity=40)!important;
+}
+.ie8 .team_icons_wrapper a:before,
+.ie8 .most_popular .price_item_btn a:before {
+	filter:alpha(opacity=20)!important;
+}
+.ie8 .team_icons_wrapper a:hover:before,
+.ie8 .most_popular .price_item_btn a:before:hover {
+	filter:alpha(opacity=40)!important;
+}
+
+.featured_items .img_block:hover .featured_item_fadder,
+.gallery_item_wrapper:hover .gallery_fadder {
+	filter:alpha(opacity=80)!important;
+}
+.flickr_wrapper {
+	filter:alpha(opacity=0);
+}
+
+.menu_toggler,
+.mobile_menu_wrapper {
+	display:none;
+}
+
+@media only screen and (max-width: 1200px) {
+	.demo_panel {
+		display:none!important;
+	}
+	header.fixed_menu {
+		display:none!important;
+	}
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+	.user_bg_layout .top-slider,
+	.user_bg_layout .main_wrapper,
+	.user_bg_layout header#main_header,
+	.user_bg_layout .pre_footer,
+	.user_bg_layout footer {
+		width:980px;
+	}
+
+	.user_bg_layout header {
+		left:50%!important;
+		margin-left:-490px!important;
+	}
+
+	/*widgets*/	
+	.flickr_widget_wrapper a .flickr_border,
+	.dribbble_widget_wrapper a .flickr_border {
+		width:55px;
+		height:55px;
+	} 
+	.widget_flickr .flickr_badge_image,
+	.dribbble_widget_wrapper .dribbble_item {
+		width:65px;
+		height:65px;
+	}	
+	.user_bg_layout .ls-container {
+		margin-left:-20px!important;
+		width:980px!important;
+	}		
+}
+
+@media only screen and (min-width: 767px) and (max-width: 979px) {
+	.user_bg_layout .top-slider,
+	.user_bg_layout .main_wrapper,
+	.user_bg_layout header#main_header,
+	.user_bg_layout .pre_footer,
+	.user_bg_layout footer {
+		width:744px;
+	}
+	.user_bg_layout header {
+		left:50%!important;
+		margin-left:-372px!important;
+	}
+	
+	/*widgets*/
+	.recent_posts li .recent_posts_img {
+		width:50px;
+		height:auto;
+	}
+	.widget_posts li {
+		padding-left:65px;		
+	}
+
+	.flickr_widget_wrapper a .flickr_border,
+	.dribbble_widget_wrapper a .flickr_border {
+		width:67px;
+		height:67px;
+	} 
+	.widget_flickr .flickr_badge_image,
+	.dribbble_widget_wrapper .dribbble_item {
+		width:77px;
+		height:77px;
+	}
+	.user_bg_layout .ls-container {
+		margin-left:-10px!important;
+		width:744px!important;
+	}		
+}
+
+@media only screen and (max-width: 767px) {
+	.header_wrapper {
+		position:relative!important;	
+	}
+	header {
+		margin-bottom:-1px!important;
+		min-height:67px!important;
+	}
+	.page_title_block {
+		padding:19px 0 18px 0;
+	}
+	header .search_box,
+	header nav {
+		display:none!important;
+	}
+	header .logo {
+		margin:16px 0;
+	}
+	.menu_toggler {
+		width:20px;
+		height:20px;
+		display:block;
+		position:absolute;
+		top:23px;
+		right:10px;
+		background:url(../img/mobile_menu.png) no-repeat
+	}
+	.mobile_menu_wrapper {
+		padding:0;
+		background:#212830;
+		text-align:center;
+	}	
+	.mobile_menu {
+		margin:0 auto;
+		position:relative;
+		text-align:left;
+		display:block!important;
+		padding:10px 0 20px 0;
+	}
+	.mobile_menu li a {
+		border:none!important;
+		display:block;
+		color:#bfc3c7!important;
+		padding:10px 15px;
+		font-size:13px;
+		line-height:19px;
+	}	
+	.mobile_menu li {
+		border:none!important;
+	}
+	.mobile_menu li .sub-menu {
+		display:block!important;
+		position:static!important;
+		width:auto!important;
+		margin:0!important;
+		padding:0!important;
+		opacity:1!important;
+		background:#212830!important;
+		border:none!important;
+	}
+	.mobile_menu li .sub-menu {
+		padding:0 0 0 30px!important;
+	}
+	.mobile_menu_wrapper li.current-menu-parent > a,
+	.mobile_menu_wrapper li.current-menu-item > a {
+		color:#ffffff!important;
+	}
+
+	.right-sidebar-block,
+	.left-sidebar-block {
+		margin-top:30px;
+	}
+	
+	footer .socials {
+		display:none;
+	}
+	footer .copyright {
+		width:100%;
+		text-align:center;
+	}
+	.pre_footer {
+		padding:30px 0;
+	}
+	#footer_bar .span3:first-child {
+		margin-top:0!important;
+	}
+	#footer_bar .span3 {
+		margin-top:30px;
+	}
+	.main_wrapper {
+		text-align:center;
+	}
+	.user_bg_layout .content_wrapper,
+	.content_wrapper {
+		margin:0 auto;
+		text-align:left;
+		overflow:inherit;
+	}
+	
+	/*Modules & Shortcodes*/
+	.shortcode_blockquote {
+		width:100%!important;
+	}
+	.featured_items ul,
+	.testimonials_list ul,
+	.teamslider ul,
+	.module_gallery .list-of-images,
+	.module_diagramm ul.skills_list,
+	.sponsors_works ul {
+		margin-left:0!important;
+	}
+	.featured_items ul li,
+	.testimonials_list ul li,
+	.teamslider ul li,
+	.module_gallery .list-of-images .gallery_item,
+	.module_diagramm .skills_list li,
+	.sponsors_works ul li {
+		width:100%!important;
+	}
+	.featured_items ul li .item,
+	.testimonials_list ul li .item,
+	.teamslider ul li .item_wrapper,
+	.module_gallery .list-of-images .gallery_item .gallery_item_padding,
+	.module_diagramm .skills_list .skill_wrapper,
+	.sponsors_works ul li .item_wrapper {
+		padding-left:0!important;
+		margin-left:0!important;
+	}
+	.module_diagramm .skills_list li {
+		margin-bottom:20px!important;
+	}
+	.promoblock_wrapper .promo_text_block {
+		width:100%;
+		float:none;
+		text-align:center;
+	}
+	.promoblock_wrapper .promo_button_block {
+		width:100%;
+		float:none;
+		text-align:center;
+		padding-top:20px;
+	}
+	.promoblock_wrapper {
+		padding:20px;
+	}
+	.promoblock_wrapper .promo_button_block a {
+		margin-left:0!important;
+		margin-right:0!important;
+	}
+	
+	.module_price_table .price_item  {
+		width:100%!important;
+		float:none!important;
+		margin-bottom:10px;
+	}
+	.module_price_table .price_item_body {
+		border-left:#dddddd 1px solid;
+		border-right:#dddddd 1px solid;
+	}
+	
+	.shortcode_tab_item_title:before {
+		display:none!important;
+	}
+	
+	.shortcode_accordion_item_body img,
+	.shortcode_toggles_item_body img,
+	.shortcode_tab_item_body img {
+		width:100%!important;
+		height:auto!important;
+	}
+
+	iframe.alignleft,
+	iframe.alignright {
+		width:100%;
+		display:block;
+		float:none!important;
+		padding:0!important;
+		margin-left:0px!important;
+		margin-right:0px!important;
+	}	
+		
+	/*Portfolio*/
+	.columns1 .portfolio_item_img {
+		margin-bottom:20px;
+	}
+	.portfolio_block.columns2,
+	.portfolio_block.columns3,
+	.portfolio_block.columns4 {
+		margin-left:0!important;
+	}
+	.portfolio_block.columns2 .portfolio_item,
+	.portfolio_block.columns3 .portfolio_item,
+	.portfolio_block.columns4 .portfolio_item {
+		width:100%;
+	}
+	.portfolio_block.columns2 .portfolio_item_wrapper,
+	.portfolio_block.columns3 .portfolio_item_wrapper,
+	.portfolio_block.columns4 .portfolio_item_wrapper {
+		margin-left:0!important;
+	}
+
+	/*Default WP Gallery*/
+	.gallery {
+		margin:-20px 0 0 0px!important;
+	}
+	
+	.gallery .gallery-item {
+		margin:20px 0 0 0!important;
+		width:100%!important;
+	}
+	.gallery .gallery-item dt,
+	.gallery .gallery-item dd {
+		margin:0 0 0 0px!important;
+	}
+	
+	.breadcrumbs {
+		display:none!important;
+	}
+	
+	ol.sitemap_list {
+		padding-left:20px!important;
+	}
+	.user_bg_layout .ls-container {
+		margin-left:0!important;
+	}
+	.page_title_block .container {
+		text-align:center;
+	}
+	
+	.module_cont {
+		margin-bottom:40px!important;
+		padding-bottom:0!important;
+	}
+	.page_title_block {
+		overflow:visible;
+	}
+	.module_line_trigger {
+		width:100%;
+	}
+}
+
+@media only screen and (min-width: 460px) and (max-width: 767px) {
+	.container {
+		width:420px;
+		margin:0 auto;
+	}
+	.user_bg_layout .top-slider,
+	.user_bg_layout .main_wrapper,
+	.user_bg_layout header#main_header,
+	.user_bg_layout .pre_footer,
+	.user_bg_layout footer,
+	.main_wrapper, 
+	.pre_footer, 
+	footer {
+		width:100%!important;
+	}
+	.main_wrapper, 
+	header, 
+	.pre_footer, 
+	footer {
+		width:100%;
+	}	
+	header {
+		margin-left:0!important;
+		left:0!important;
+		width:100%;
+	}
+
+	/*widgets*/	
+	.flickr_widget_wrapper a .flickr_border,
+	.dribbble_widget_wrapper a .flickr_border {
+		width:50px;
+		height:50px;
+	} 
+	.widget_flickr .flickr_badge_image,
+	.dribbble_widget_wrapper .dribbble_item {
+		width:60px;
+		height:60px;
+	}
+	.flickr_widget_wrapper a .flickr_border,
+	.dribbble_widget_wrapper a .flickr_border,
+	.flickr_widget_wrapper .flickr_badge_image {
+		transition:none;
+		-webkit-transition:none;
+	}
+	.wrapped_video iframe,
+	.module_google_map iframe {
+		height:210px;
+	}	
+}
+
+@media only screen and (max-width: 459px) {
+	.container {
+		width:300px;
+		margin:0 auto;
+	}
+	header {
+		margin-left:0!important;
+		left:0!important;
+	}
+	.user_bg_layout .top-slider,
+	.user_bg_layout .main_wrapper,
+	.user_bg_layout header#main_header,
+	.user_bg_layout .pre_footer,
+	.user_bg_layout footer,
+	.content_wrapper,
+	.main_wrapper, 
+	.pre_footer, 
+	header,
+	footer {
+		width:100%!important;
+	}
+
+	.main_wrapper, 
+	header, 
+	.pre_footer, 
+	footer {
+		width:300px;
+	}
+
+	.wrapped_video iframe,
+	.module_google_map iframe {
+		height:180px;
+	}	
+
+	/*widgets*/	
+	.flickr_widget_wrapper a .flickr_border,
+	.dribbble_widget_wrapper a .flickr_border {
+		width:82px;
+		height:82px;
+	} 
+	.widget_flickr .flickr_badge_image,
+	.dribbble_widget_wrapper .dribbble_item {
+		width:92px;
+		height:92px;
+	}
+}
+
+/*retina*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.menu_toggler {
+		background:url(../img/retina/mobile_menu.png) no-repeat;
+		background-size:20px 20px!important;
+	}
+
+	header .logo img.logo_def {
+		display:none!important;
+	}
+	header .logo img.logo_retina {
+		display:block!important;
+	}
+
+	.header_wrapper .search_box span {
+		background:url(../img/retina/trend_icons.png) no-repeat -160px 0px;
+		background-size:333px 40px!important;
+	}
+	.header_wrapper.search_show .search_box span {
+		background:url(../img/retina/trend_icons.png) no-repeat -180px 0px;
+		background-size:333px 40px!important;
+	}
+	
+	.socials_list li a.ico_social-facebook:before {
+		background:url(../img/retina/trend_icons.png) no-repeat 0 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-twitter:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -20px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-linked:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -40px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-delicious:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -60px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-vimeo:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -80px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-flickr:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -100px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-pinterest:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -120px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-tumblr:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -140px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-youtube:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -240px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-instagram:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -260px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-gplus:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -280px 0;
+		background-size:333px 40px!important;
+	}
+	.socials_list li a.ico_social-dribbble:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -300px 0;
+		background-size:333px 40px!important;
+	}
+	
+	.socials_list li:hover a.ico_social-facebook:before {
+		background:url(../img/retina/trend_icons.png) no-repeat 0 -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-twitter:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -20px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-linked:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -40px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-delicious:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -60px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-vimeo:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -80px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-flickr:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -100px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-pinterest:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -120px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-tumblr:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -140px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-youtube:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -240px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-instagram:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -260px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-gplus:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -280px -20px;
+		background-size:333px 40px!important;
+	}
+	.socials_list li:hover a.ico_social-dribbble:before {
+		background:url(../img/retina/trend_icons.png) no-repeat -300px -20px;
+		background-size:333px 40px!important;
+	}
+	
+	.shortcode_messagebox .box_close {
+		background:url(../img/retina/trend_icons.png) no-repeat -189px -20px;
+		background-size:333px 40px!important;
+	}	
+	.shortcode_messagebox .box_close:hover {
+		background:url(../img/retina/trend_icons.png) no-repeat -179px -20px;
+		background-size:333px 40px!important;
+	}	
+
+	blockquote.shortcode_blockquote.type3:after,
+	blockquote.shortcode_blockquote.type4:after,
+	blockquote.shortcode_blockquote.type5:after {		
+		background:url(../img/retina/trend_icons.png) no-repeat -160px -20px!important;
+		background-size:333px 40px!important;
+	}	
+	.pre_footer .widget_nav_menu ul li:before,
+	.pre_footer .widget_archive ul li:before,
+	.pre_footer .widget_pages ul li:before,
+	.pre_footer .widget_categories ul li:before,
+	.pre_footer .widget_recent_entries ul li:before {		
+		background:url(../img/retina/trend_icons.png) no-repeat -232px -1px;
+		background-size:333px 40px!important;
+	}
+
+	.module_layer_slider .ls-nav-prev {		
+		background:url(../img/retina/trend_icons.png) no-repeat -200px 0;
+		background-size:333px 40px!important;
+	}
+	.module_layer_slider .ls-nav-next {		
+		background:url(../img/retina/trend_icons.png) no-repeat -220px 0;
+		background-size:333px 40px!important;
+	}
+	.masonry_portfolio_preview .pf_preview_close {
+		background:url(../img/retina/trend_icons.png) no-repeat -320px 0;
+		background-size:333px 40px!important;
+	} 
+	
+}

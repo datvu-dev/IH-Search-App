@@ -1,0 +1,1367 @@
+/*@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('fonts/proximanova_bold/proximanova-bold.svg#proxima_nova_rgbold') format('svg');
+    src: url('fonts/proximanova_bold/proximanova-bold.eot');
+    src: url('fonts/proximanova_bold/proximanova-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova_bold/proximanova-bold.woff') format('woff'),
+         url('fonts/proximanova_bold/proximanova-bold.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('fonts/proximanova_regular/proximanova-regular.svg#proxima_nova_rgregular') format('svg');
+    src: url('fonts/proximanova_regular/proximanova-regular.eot');
+    src: url('fonts/proximanova_regular/proximanova-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/proximanova_regular/proximanova-regular.woff') format('woff'),
+         url('fonts/proximanova_regular/proximanova-regular.ttf') format('truetype');         
+    font-weight: normal;
+    font-style: normal;
+}*/
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('css/proxima-nova-font/mark_simonson_-_proxima_nova_bold-webfont.eot');
+    src: url('css/proxima-nova-font/mark_simonson_-_proxima_nova_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/proxima-nova-font/mark_simonson_-_proxima_nova_bold-webfont.woff') format('woff'),
+         url('css/proxima-nova-font/mark_simonson_-_proxima_nova_bold-webfont.ttf') format('truetype'),
+         url('css/proxima-nova-font/mark_simonson_-_proxima_nova_bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('css/proxima-nova-font/mark_simonson_-_proxima_nova_regular-webfont.eot');
+    src: url('css/proxima-nova-font/mark_simonson_-_proxima_nova_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('css/proxima-nova-font/mark_simonson_-_proxima_nova_regular-webfont.woff') format('woff'),
+         url('css/proxima-nova-font/mark_simonson_-_proxima_nova_regular-webfont.ttf') format('truetype'),
+         url('css/proxima-nova-font/mark_simonson_-_proxima_nova_regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  * {
+    font-family: 'proxima_nova_rgregular' !important;
+  }
+  body {
+    font-family: 'proxima_nova_rgregular' !important;
+    background-color: #fff;
+  }
+  body .clean_bg_cont {
+    background: #fff;
+  }
+  h5, h6, h5 span, h6 span, h5 a, h6 a {
+    font-family: 'proxima_nova_rgregular';
+  }
+  h1, h2, h3, h4, h1 span, h2 span, h3 span, h4 span, h1 a, h2 a, h3 a, h4 a {
+    font-family: 'proxima_nova_rgbold' !important;
+  }
+  p {
+    font-family: 'proxima_nova_rgregular';
+  }
+  input[type='text'] {
+    color: #000;
+  }
+  input {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  @font-face {
+  font-family: 'icomoon';
+  src:url('fonts/icomoon.eot?fjf36i');
+  src:url('fonts/icomoon.eot?#iefixfjf36i') format('embedded-opentype'),
+    url('fonts/icomoon.woff?fjf36i') format('woff'),
+    url('fonts/icomoon.ttf?fjf36i') format('truetype'),
+    url('fonts/icomoon.svg?fjf36i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  p, td, div, blockquote p {
+    font-size: 14px;
+  }
+  a.logo {
+    cursor: pointer;
+  }
+  a.logo img {
+    width: 263px;
+  }
+  body.antibody_content_body ::selection {
+    background: #ec1a3f; 
+  }
+  body.antigen_content_body ::selection {
+    background: #00A79D; 
+  }
+  .antibody_content_wrapper::selection, .antibody_content_wrapper::-moz-selection  {     
+    background: #ec1a3f; 
+  }
+  .antigen_content_wrapper::selection, .antigen_content_wrapper::-moz-selection  {     
+    background: #00A79D; 
+  }
+  #dvLoading{
+    background:#fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    font-size: 30px;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;    
+    /*opacity: 0.9;*/
+   /*margin: -25px 0 0 -25px;*/
+  }
+  #dvLoading img {
+    width: 170px;
+    position:relative;
+    top: 32%;
+    left: -2%;
+  }
+  #dvLoading span {
+    position:relative;
+    top: 37%;
+    left: -2%;
+  }
+  .antibody-load {
+    color: #ec1a3f;
+  }
+  .antigen-load {
+    color: #00A79D;
+  }
+  .header_wrapper {
+    z-index: 9999;
+    position:absolute;
+    width: 100%;
+  }
+  .header_wrapper a img {
+    margin-top: 25px;    
+  }
+  .header_wrapper .search_box, .header_wrapper .menu {
+    display: none;
+  }
+  .content_block {
+    padding:0px;
+  }
+  .content_block .shortcode_tabs {
+    margin-top:10%;
+  }
+  .content_block .search_form_wrap{
+    margin: 0px auto !important;
+    width: 60% ;
+    float: none !important; 
+    min-height: 20px;
+    /*margin-bottom: 40px;*/
+  }
+  .content_block .search_form_wrap .all_heads_cont div {
+    padding: 4px 10px;
+    margin-bottom: 0px;   
+    margin-right: 0px; 
+  } 
+  .content_block .search_form_wrap .all_heads_cont div a {
+    color: #fff;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    padding-right: 16px;    
+  }
+  .content_block .search_form_wrap .all_heads_cont div a:hover {
+    color: #fff;
+  }
+  .content_block .search_form_wrap .all_heads_cont div#antibody-head-active {
+    background: #ec1a3f url('img/small_arrow_down.png') no-repeat 95%;
+  }
+  .content_block .search_form_wrap .all_heads_cont div#antigen-head-active {
+    background: #00A79D url('img/small_arrow_down.png') no-repeat 95%;
+  }
+  .content_block .search_form_wrap .all_heads_cont div#antibody-head-inactive, .content_block .search_form_wrap .all_heads_cont div#antigen-head-inactive {
+    background: #394956;
+  }
+  .search_form form#ih_search_form {
+    width: 60%;
+    margin: 0px auto;    
+  }
+  .search_form form#ih_search_form #search_input {
+    background: #fff;
+  }
+  /*.search_form form#ih_search_form .clearable {
+    background: #fff url('img/icon/cross_search.jpg') no-repeat right -20px center;    
+  }
+  .search_form form#ih_search_form .x { 
+    background-position: right 5px center;
+  }
+  .search_form form#ih_search_form .onX {
+    cursor: pointer;
+  }*/
+  .clearable{
+    position:relative;
+  }
+  .data_field{
+      padding-right:17px; /* add space for the 'x' icon*/
+  }
+  span.icon_clear{
+    position:absolute;
+    top:13px;
+    right:10px;    
+    display:none;
+    /* now go with the styling */
+    cursor:pointer;
+    font: bold 1em sans-serif;
+    color:#38468F;  
+    }
+  @-moz-document url-prefix() {
+    span.icon_clear{
+      position:absolute;
+      top:25px;
+      right:180px;    
+      display:none;
+      /* now go with the styling */
+      cursor:pointer;
+      font: bold 1em sans-serif;
+      color:#38468F;  
+    }
+  }  
+  #space {
+    padding: 20px 0px;
+    width: 100%;
+  }
+  .search_form form#ih_search_form .search_input_antibody{
+    float: left; 
+    width: 65%; 
+    border: 1px solid #ec1a3f !important;
+    padding:10px 14px;    
+  }
+  .search_form form#ih_search_form .search_input_antigen{
+    float: left; 
+    width: 65%; 
+    border: 1px solid #00A79D !important;
+    padding:10px 14px;   
+  }
+  .search_form form#ih_search_form #search_input {
+    border-right: 0 !important;
+    background: url('img/search-divide.jpg') no-repeat right !important; ;
+  }
+  .search_form form#ih_search_form div.search-select {
+    float: left;
+    width: 18%;   
+    /*padding: 20px 0px;*/     
+    border-left: 0 !important;
+    position:relative;
+    overflow: hidden;
+  }
+  .search_form form#ih_search_form div.search-select #option-antigen {
+    display: none;
+  }
+  .search_form form#ih_search_form div.search-select-antibody {
+    border: 1px solid #ec1a3f;
+  }
+  .search_form form#ih_search_form div.search-select-antigen {
+    border: 1px solid #00A79D;
+  }
+  /*.search_form form#ih_search_form div.search-select ul.search-option {
+    width: 100%;
+    height: 40px;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 999;
+  }
+  .search_form form#ih_search_form div.search-select ul.search-option li {
+    padding: 10px 14px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .search_form form#ih_search_form div.search-select-antibody ul.search-option li.search-option-init {
+    background: url('img/icon/arrow_down_small_red.jpg') no-repeat right;
+  }
+  .search_form form#ih_search_form div.search-select-antigen ul.search-option li.search-option-init {
+    background: url('img/icon/arrow_down_small_green.jpg') no-repeat right;
+  }
+  .search_form form#ih_search_form div.search-select-antibody ul.search-option li.search-option-hidden {
+    float: left;
+    display: none;
+    width: 77%;
+    border-left: 1px solid #ec1a3f;
+    border-right: 1px solid #ec1a3f;
+    background: #fff;
+  }
+  .search_form form#ih_search_form div.search-select-antibody ul.search-option li.search-option-last {
+    border-bottom: 1px solid #ec1a3f;
+  }
+  .search_form form#ih_search_form div.search-select-antigen ul.search-option li.search-option-hidden {
+    float: left;
+    display: none;
+    width: 77%;
+    border-left: 1px solid #00A79D;
+    border-right: 1px solid #00A79D;
+    background: #fff;
+  }
+  .search_form form#ih_search_form div.search-select-antigen ul.search-option li.search-option-last {
+    border-bottom: 1px solid #00A79D;
+  }
+  .search_form form#ih_search_form div.search-select-antibody ul.search-option li.search-option-hidden:hover {    
+    color: #fff;
+    background: #ec1a3f;
+  }
+  .search_form form#ih_search_form div.search-select-antigen ul.search-option li.search-option-hidden:hover {    
+    color: #fff;
+    background: #00A79D;
+  }*/
+  .search_form form#ih_search_form select#search_option {    
+    margin:0;    
+    border: 0;
+    outline-style: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-size: 14px;
+    padding:  11px;
+    cursor: pointer;
+    width:120%;
+    height: 40px;
+  }  
+  .search_form form#ih_search_form div.search-select-antibody select#search_option {
+    background-image: url('img/icon/arrow_down_small_red.jpg');
+    background-repeat: no-repeat;
+    background-position: 75% 55%;
+    background-size: 15px 10px !important; 
+  }
+  .search_form form#ih_search_form div.search-select-antigen select#search_option {
+    background-image: url('img/icon/arrow_down_small_green.jpg');
+    background-repeat: no-repeat;
+    background-position: 75% 55%;
+    background-size: 15px 10px !important; 
+  }
+  @-moz-document url-prefix() {
+    .search_form form#ih_search_form select#search_option {
+      -moz-appearance: none;
+      padding: 10.5px;
+    }
+  }
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+     /* Safari-specific styles here. */
+     ::i-block-chrome,.search_form form#ih_search_form select#search_option {
+      padding: 13.5px;
+     }
+  }
+  .search_form form#ih_search_form #submit_search{
+    background-image: url('img/icon/search.png');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 40px;
+    height: 42px;
+    -webkit-transform: translateZ(0);
+  }
+  .search_form form#ih_search_form .search_submit_antibody{
+    float: left;    
+    background-color: #ec1a3f;    
+  }
+  .search_form form#ih_search_form .search_submit_antigen{
+    float: left;
+    background-color: #00A79D;    
+  }
+  .search_form form#ih_search_form .icon-search:before {    
+    content: "";
+  }
+  .search_form form#ih_search_form .search_submit_antibody:hover, .search_form form#ih_search_form .search_submit_antigen:hover {
+    background-color: #394956;
+  }
+  .search_form form#ih_search_form #advance_search {    
+    margin-top: 15px;
+    font-size: 19px;   
+    text-transform: uppercase;
+  }
+  .search_form form#ih_search_form #advance_search span {
+    font-family: 'proxima_nova_rgregular' !important;
+  }
+  .adv-search-link-antibody {
+    color: #ec1a3f;
+  }
+  .adv-search-link-antigen, .adv-search-link-antigen span {
+    color: #00A79D;
+  }
+  .search_form form#ih_search_form #search-example {
+    text-align: center;
+    clear: both;
+  }
+  .search_form form#ih_search_form #search-example span {
+    color: #2A2F33;
+  }
+  .shortcode_tab_item_title.active:before {
+    height: 0px;
+  }
+  /* Advanced Search */
+  .advance-search-wrap {
+    margin-left: 0px !important;
+    margin-top: 20px;
+  }
+  .antibody-adv-search, .antigen-adv-search {
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+  .antigen-adv-search {
+    display: none !important;
+  }
+  .adv-search-col {
+    width: 45%;
+    margin-right: 30px;
+    float: left;
+  }
+  .advance_search h6 {
+    font-family: 'proxima_nova_rgbold' !important;
+    color: #394956;
+  }
+  .advance_search .filter-block {
+    clear: both;
+  }
+  .advance-block-left {
+    float:left;
+    width: 60%;
+    height: 23px;
+    clear: both;
+  }
+  .advance-block-right {
+    float: right;
+    width: 45%;
+  }
+  .advance-block-clear {
+    clear: both;
+  }
+  .advance_search .filter-smallblock {
+    margin-bottom:10px;   
+    padding-bottom: 5px;
+    overflow:hidden;
+  }
+  .antibody-adv-search .filter-smallblock span.select-wrap {
+    position:relative;
+    float: right;
+  }
+  .antigen-adv-search .filter-smallblock span.select-wrap {
+    position:relative;
+    float: left;
+  }
+  .advance_search .filter-smallblock h6 {
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 0px;
+  }
+  .advance_search .filter-smallblock select {
+    width: 127px;
+  }
+  .antibody-adv-search .noUi-connect {
+    background: #ec1a3f;
+  }
+  .antigen-adv-search .noUi-connect {
+    background: #00A79D;
+  }
+  .advance_search #caucasian_slider, .advance_search #thermal_slider, .advance_search #asian_slider, .advance_search #antibody_caucasian_slider {
+    width: 80%;
+    margin-left: 30px;
+    margin-top:5px;
+  }
+  .advance_search .noUi-handle {
+    height: 20px;
+    top: -7px;
+  }
+  .advance-search-button {
+    margin-left: 0px !important;
+    margin-bottom: 20px;
+  }
+  .advance-search-button a {
+    background: #ED1940;
+    color: #fff;
+    padding: 8px 15px;
+  }
+  .advance-search-button a:hover {
+    background: #394956 !important;
+  }
+  .result {
+    display:none;
+    clear: both;  
+    width: 60%;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 13px 1%;
+    text-transform: uppercase;
+    font-weight: bold;    
+  }
+  .result-antibody {    
+    color: #ED1940;
+  }
+  .result-antigen {    
+    color: #00A79D;
+  }
+  .icon-csl-logo:before {
+    font-family: 'icomoon';
+    content: "\e601";
+  }
+  .icon-right-arrow:before {
+    font-family: 'icomoon';
+    content: "\e602";    
+  }
+  .icon-left-arrow:before {
+    font-family: 'icomoon';
+    content: "\e603";
+  }
+  .icon-down-arrow:before {
+    font-family: 'icomoon';
+    content: "\e604";
+  }
+  .icon-up-arrow:before {
+    font-family: 'icomoon';
+    content: "\e605";
+  }
+  /*.icon-cross:before {
+    font-family: 'icomoon';
+    content: "\e606";
+  }*/
+  a.full_expand {
+    color:#6F7880;
+  }
+  a.full_expand:hover {
+    color: #394956;
+  }
+  #isotope_container .item { 
+    width: 23%; 
+    height: 250px; 
+    float: left;
+    background: #0D8;
+    border: 2px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.7);
+    margin-bottom: 20px;
+    text-align: center;
+    /* margin-right: 20px;*/
+  }
+  .item:hover {
+    background: #8CF;
+    cursor: pointer;
+  }
+    .grid_spacer{width: 33.3%; height: 300px; display: none;}
+    #isotope_container .grid_spacer{width: 33.3%; height: 400px;  display: none;}
+    #isotope_container{width: 1170px; /*max-width: 1170px;*/ height: 100%;}
+    #isotope_container .item span{
+    position: relative;
+    top: 45%;
+    color: #fff;
+    width: 100%; height: 100%; font-size: 5em; 
+    left: 18%;
+  }
+  .isotope:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .close_all{display: none;}
+  .expand4 .close_all, .expand_height .close_all{
+    display: block;
+    font-size: 20px;    
+  }
+  .close_all {
+    background: url('img/icon/cross.jpg') right no-repeat;
+    /*width: 20px;*/
+    height: 20px;
+  }
+  .blood_group_attr.visible{display: inline-block;}
+  .item button{position: relative; bottom: 0; float: right;}
+  #isotope_container .expand_height{
+    height: 500px;
+  }
+  #isotope_container .expand2{
+    height: 500px;
+    width: 100%;
+  }
+  .blood_group_attr.full_width{width: 100%; float: none;}
+  .antibody_wrap.full_width{width: 92%; float: none;}
+  .antigen_root_wrap .antigen_outer_wrap.expand_height, .antibody_root_wrap .antibody_outer_wrap.expand_height
+  {height: auto;}
+  .exp_disp{clear: both; width: 100%;}
+  .exp_disp .blood_group_attr {
+    display:block;
+  }
+  .desc_title{
+    font-size: 14px; 
+    text-align: left; 
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+  /*.compatible .desc_title, .compatible + .desc_text li  {
+    color: #ec1a3f;
+  }*/
+  .desc_text{
+    text-align: left;
+    padding-left: 20px; 
+    width: 100%;
+  }
+  .desc_text ul{
+    list-style-type: disc;
+  }
+  .disp_name,.disp_text{display: none;}
+  .visible{
+    display: block;
+  }
+  .disp_text.visible {
+    margin-top:20px;
+  }
+  .root_wrap{
+    width: 100%; 
+    clear: both; 
+    margin-top: 98px;
+    margin-bottom: 25px;
+  }
+  .antigen_outer_wrap,.antibody_outer_wrap, .grid_wrap{
+    width: 32.3%; 
+    height: 250px; 
+    float: left;
+    background: #e2e2e2;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    min-width: 300px;
+  }
+  .hero_info_wrap{
+    width: 100%;
+    height: 81px;
+    float: none;
+    position: relative;
+  }
+  .def_header{
+    color: #fff; 
+    padding:5px 0; 
+    margin-bottom: 30px; 
+    margin-left: 0;    
+    position: absolute;
+    left: 0;
+    width:100%;
+  }
+  .def_header .header-container {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .def_header h1, .def_header h3, .def_header span{color: #fff;}
+  .def_header.antigen{background-color: #00A79D;}
+  .def_header.antibody{background-color: #ec1a3f;}
+  .def_header h1{
+    font-size: 20pt;
+    margin-bottom: 0px;
+    line-height: 35px;
+    margin-top: 12px;
+  }
+  .def_header h2{
+    font-size: 15pt;
+  }
+  .def_header h3, .def_header h3 span{
+    font-size: 10pt;
+    line-height: 12px;
+    font-family: 'proxima_nova_rgregular';
+  }
+  .sub_def_header h3 span{
+    margin-left: 20px;
+  }
+  .hide-text {
+    /* Hide the text. */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+  }
+  .antibody_info_wrap, .antigen_info_wrap {
+    margin-top: 40px;
+  }
+  .isbt_root{
+    background-color: #fff; 
+    color: #2C3E50;
+    float: left; 
+    padding: 5px 20px;
+    font-family: 'proxima_nova_rgregular';
+  }
+  .isbt_root h4{
+    color: #2C3E50;
+    margin: 0px;
+    font-size: 24px;
+    font-family: 'proxima_nova_rgregular';
+  }  
+  .blood_grp_hero_name{
+    
+    float: left; 
+    text-align: left; 
+    padding-left: 15px;
+    width: 60%;
+  }
+  .antigen_info_wrap .blood_grp_hero_name h1,
+  .antibody_info_wrap .blood_grp_hero_name h1 {    
+    font-size: 60px;    
+    line-height: .8em;
+    margin: 0px;
+    width: 100%;
+  }
+  .rank {
+    color: #e2e2e2;
+    position:absolute;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+  }
+  .expand_height .antigen_info_wrap .blood_grp_hero_name h1,
+  .expand_height .antibody_info_wrap .blood_grp_hero_name h1 {
+    font-size: 40px;
+  }
+  .antibody_info_wrap .blood_grp_hero_name h1 {
+    color: #ec1a3f;
+  }
+  .antigen_info_wrap .blood_grp_hero_name h1 {
+    color: #00A79D;
+  }
+  .blood_grp_hero_name .name_sub {
+    color: #2C3E50;
+    font-family: 'proxima_nova_rgregular';
+    font-size: 16px;
+  }
+  .antigen_count {
+    margin-left: 2px;
+  }
+  .controls{
+    float: right;
+    display: block;
+    width: 50px;
+    height: 55px;
+    font-size: 50px;
+    color: #939597;
+    position: absolute;
+    right: 0px;
+  }
+  /*.controls a.full_expand {
+    color: #939597;
+    background: url('img/icon/arrow_right_big.jpg') no-repeat;
+    width: 35px;
+    height: 55px;
+  }*/
+  /*.controls a.full_expand:hover {
+    background: url('img/icon/arrow_right_big_dark.jpg') no-repeat;
+    width: 35px;
+    height: 55px;
+  }*/
+  .controls a:hover {
+    color: #2C3E50;
+  }
+  .arrow-red, .arrow-green {    
+    padding-right:4px;
+    margin-left: 4px;
+    line-height: 30px;
+    float: right;
+  }
+  .arrow-red {
+    color: #ec1a3f;
+  }
+  .arrow-green {
+    color: #00A79D;
+  }
+  .sub_wrap a, .disp_name a {
+    color: #616367;
+  }  
+  .full_expand{float: left; width: 25%;}
+  .blood_group_attr{display: none;}
+  .sub_antigen_wrap,.sub_antibody_wrap{
+    width: 96%;
+    padding: 10px 10px 0px 10px;
+    position: absolute;
+    top: initial !important;
+    bottom: 10px !important;
+    float: left;
+    height: auto;
+  }
+  .expand_height .sub_antigen_wrap, .expand_height .sub_antibody_wrap {
+    position: relative;
+    padding: 0px;
+  }
+  .antibody_outer_wrap.active .sub_antigen_wrap,.antibody_outer_wrap.active .sub_antibody_wrap
+  {
+    top: -20px;
+  }
+  .antibody_outer_wrap.active .info_display_wrap,
+  .antibody_other_outer_wrap.active .info_display_wrap, 
+  .antigen_outer_wrap.active .info_display_wrap, 
+  .antigen_other_outer_wrap.active .info_display_wrap{
+    padding-bottom: 30px;
+  }
+  .info_display_wrap {
+    margin: 0px 15px;
+    min-width: 250px;
+  }
+  .expand_height .info_display_wrap {
+    margin: 0px;
+  }
+  .info_display_wrap .disp_name.visible {
+    display: block;     
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    height: 25px;
+  }
+  .info_display_wrap .disp_name.visible .arrow-red, .info_display_wrap .disp_name.visible .arrow-green {
+    display:none;
+  }
+  .antigen_wrap, .antibody_wrap{
+    width: 24%;
+    float: left;    
+    background: #fff ; 
+    margin-right: 3px;
+    margin-top: 5px;
+  }
+  .oversized {
+    width: auto !important;
+  }
+  .expand_height{height:auto;}
+  .blood_group_name{
+    text-align: left; 
+    /*width: 90%%;*/
+    height: 29px; 
+    cursor: pointer; 
+    line-height: 32px; 
+    clear: both;
+    /*padding-top: 1px;*/
+    padding-left: 8px;  
+    position:relative;
+    /*background: url('img/icon/arrow_right_small_red.jpg') no-repeat right;*/
+  }
+  @-moz-document url-prefix() {
+    .blood_group_name {
+      line-height: 36px !important;
+    }
+  }
+  /*.antibody_outer_wrap .blood_group_name, .antibody_other_outer_wrap .blood_group_name {
+    background: url('img/icon/arrow_right_small_red.jpg') no-repeat right;
+  }*/
+  /*.antigen_outer_wrap .blood_group_name, .antigen_other_outer_wrap .blood_group_name {
+    background: url('img/icon/arrow_right_small_green.jpg') no-repeat right;
+  }*/
+  .expanded .blood_group_name{
+    height: 27px;
+    margin-bottom: 20px;
+    padding-bottom: 2px; 
+  }
+  /*.expand_height .sub_antibody_wrap .blood_group_name {
+    background: url('img/icon/arrow_right_small_red_dark.jpg') no-repeat right;
+  }*/
+  /*.expand_height .sub_antigen_wrap .blood_group_name {
+    background: url('img/icon/arrow_right_small_green_dark.jpg') no-repeat right;
+  }*/
+  .quad_width{display: block; width: 98%;}
+  .expand3{
+    width: 75%;
+  }
+  .expanded, .expand_height {
+    background: #fff;
+  }
+  .expanded .isbt_root, .expanded .isbt_root h4, .expand_height .isbt_root, .expand_height .isbt_root h4 {
+    background: #394956;
+    color: #fff;
+  }
+  .expanded .sub_antigen_wrap,.expanded .sub_antibody_wrap {
+    width: 100%;
+    float: left;
+    height: auto !important;
+    padding-left: 0px;
+  }
+  /*.expanded .antibody_wrap .blood_group_name {
+    background: #d5d9dc url('img/icon/arrow_right_small_red_dark.jpg') no-repeat right;
+    line-height: 27px; 
+  }*/
+  /*.expanded .antigen_wrap .blood_group_name {
+    background: #d5d9dc url('img/icon/arrow_right_small_green_dark.jpg') no-repeat right;
+    line-height: 27px; 
+  }*/
+  
+  .expand
+  .expand2{
+    width: 50%;
+  }
+  .expand4{
+    width: 100%; 
+    height: auto;     
+  }
+  .expand4 .singleElement{
+    width: 22%;     
+    position: relative !important;
+    top: 0px !important;
+    left: 0px !important;
+    margin-right: 30px;
+    margin-bottom: 30px !important;    
+     
+  }
+
+  .expand4 .singleElement .blood_group_name {
+    background: #d5d9dc;
+  }
+  .expand4 .rank {
+    color:#fff;
+  }
+  .expand_height .disp_name {
+    background: #d5d9dc;
+    line-height: 27px; 
+  }
+  @-moz-document url-prefix() {
+    .expand_height .disp_name {
+      line-height: 30px !important;
+    }
+  }
+  .expand_height .singleElement {
+    background: #d5d9dc;
+  }
+  .expand_height .rank {
+    color: #fff;
+  }  
+  .expand_height .activeElement {
+    background: #fff;
+  }
+  .comment .desc_text{display: block;}
+  .comment .desc_title{cursor: pointer;}
+  .column-width-isotope {width: 32.3%;}
+  .grid_spacer_single_element{width: 28%; height: auto;  display: none;}
+  .advance_search,.ie-display{display: none;}
+  .comment .desc_text {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+  }
+  .antibody-comment span {
+    color: #ec1a3f;
+  }
+  .antigen-comment span {
+    color: #00A79D;
+  }
+  .op0{opacity: 1;}
+  .tooltip {
+    display: block;
+    position: absolute;
+    border: 1px solid #D9D9D9;
+    font: 400 12px/12px Arial;
+    border-radius: 3px;
+    background: #fff;
+    top: 0px;
+    padding: 5px;
+    left: -9px;
+    text-align: center;
+    width: 50px;
+  }
+  .tooltip strong {
+    display: block;
+    padding: 2px;
+  }
+  #cover {
+    background: url("http://www.aveva.com/Images/ajax-loader.gif") no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.pre_footer {
+  background: #3b4952;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.pre_footer img {
+  margin-bottom: 20px;
+  width: 182px;
+}
+.footer-reference {
+  width: 47%;
+  float: left;
+}
+.pre_footer h6 {
+  color: #fff;
+  margin-bottom: 0px;
+  font-weight: bold; 
+}
+.pre_footer .glossary .glossary-block {
+  clear: both;
+}
+.pre_footer .glossary strong {
+  display: inline-block;
+  width:60px;
+  float: left;
+  font-size: 12px;
+  color: #fff;
+}
+.pre_footer .glossary span {
+  width: 75%;
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+  float: left;
+}
+.pre_footer .footer-block p {
+  font-size: 12px;
+  color: #fff;
+  line-height: 14px;  
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+.pre_footer .copyright {
+  margin-top: 45px;
+}
+/* ---- MEDIA QUERIES & RESPONSIVE DISPLAY ---- */
+@media only screen and (max-width: 350px) {
+  .shortcode_tab_item_title {
+    width: 44.4%;
+  }
+  #ih_search_form #search_input {
+    width: 46%;
+  }
+  .search_form form#ih_search_form div.search-select {
+    width: 36%;
+  }
+  
+  /* Footer */
+  .pre_footer {
+    width: 94.5% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+  } 
+}
+@media only screen and (min-width: 351px) and (max-width: 480px) {
+  .shortcode_tab_item_title {
+    width: 44%;
+  }
+  #ih_search_form #search_input {
+    width: 56%;
+  }
+  .search_form form#ih_search_form div.search-select {
+    width: 26%;
+  }
+  
+  /* Footer */
+  .pre_footer {
+    width: 94% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+  } 
+}
+@media only screen and (max-width: 480px) {  
+  
+  .antigen_wrap, 
+  .antibody_wrap {
+    width: 32.5%;
+  }
+  .antigen_outer_wrap, 
+  .antibody_outer_wrap, 
+  .grid_wrap {
+    height: 260px;
+  }
+  .antigen_info_wrap .blood_grp_hero_name h1, 
+  .antibody_info_wrap .blood_grp_hero_name h1 {
+    font-size: 50px;
+  }
+  
+}
+@media only screen and (min-width: 481px) and (max-width: 568px) {
+  .shortcode_tab_item_title {
+    width: 44%;
+  }
+  #ih_search_form #search_input {
+    width: 56%;
+  }
+  .search_form form#ih_search_form div.search-select {
+    width: 26%;
+  }
+  .pre_footer {
+    width: 94% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+  }  
+  
+} 
+@media only screen and (min-width: 481px) and (max-width: 657px) {
+  .element-container {
+    width: 400px !important;
+    margin: 0px auto !important;
+  }
+}
+@media only screen and (max-width: 568px){
+  /* General */ 
+  #dvLoading img {
+    width: 120px;    
+    top: 30%;
+    left: 0;
+  }
+  #dvLoading span {
+    position:relative;
+    top: 40%;
+    left: 0;
+  }
+  /* Search */
+  .content_block .search_form_wrap {
+    width: 100% !important;
+  } 
+  
+  /* Header */
+  .def_header h1 {
+    font-size: 16px;
+  }
+
+  /* Expand View */
+  .expand4, .expand_height {
+    height: auto !important;
+  }
+  .expand4 .singleElement {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Footer */  
+  
+  .pre_footer h6 {
+    margin-top: 10px;
+  }
+  .footer-reference {
+    width: 100%;
+  }
+  .pre_footer .footer-reference p {
+    font-size: 12px;    
+  }
+  .antibody_root_wrap, .antigen_root_wrap {
+    margin-top: 78px;    
+  }
+  .antibody_other_root_wrap, .antigen_other_root_wrap {
+    margin-top: 120px;    
+  } 
+}
+@media only screen and (min-width: 569px) {
+  .expand4 .oversized {
+    width: 22% !important;
+  }
+}
+@media only screen and (min-width: 569px) and (max-width: 767px) {
+  .shortcode_tab_item_title {
+    width: 44%;
+  }
+  .content_block .search_form_wrap {
+    width: 100% !important;
+  }
+  .search_form form#ih_search_form .search_input_antibody, .search_form form#ih_search_form .search_input_antigen {
+    width: 64%;
+  }
+  .def_header h1 {
+    font-size: 20px;
+  }
+  .antibody_root_wrap, .antigen_root_wrap {
+    margin-top: 77px;    
+  }
+  .antibody_other_root_wrap, .antigen_other_root_wrap {
+    margin-top: 104px;    
+  } 
+
+  /* Expand View */
+  .expand4 .singleElement {
+    width: 47%;
+    margin-right: 3%;    
+  }
+
+  /* Footer */
+  .pre_footer {
+    width: 94% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+  } 
+}
+@media only screen and (max-width: 657px) {
+  /* Element Wrap */
+  .antigen_outer_wrap, .antibody_outer_wrap, .grid_wrap {
+    margin-left: 3%;
+    width: 94%;
+  }  
+}
+@media only screen and (min-width: 658px) and (max-width: 979px) {
+  /* Column Width */
+  .column-width-isotope {
+    width: 46%;
+    /*display: none;*/
+  }
+  /* Element Wrap */
+  .antigen_outer_wrap, .antibody_outer_wrap, .grid_wrap {
+    margin-left: 2%;
+    width: 45%;
+    /*position: relative !important;
+    top:10px !important;
+    left: 0 !important;*/
+  }
+  .expanded, .expand4 {
+    width: 97%;
+  }
+  .expand4 .singleElement {
+    width: 31%;
+    margin-right: 2%;
+  }
+   
+  .oversized {
+    width: auto !important;
+  }
+  .antigen_info_wrap .blood_grp_hero_name h1, .antibody_info_wrap .blood_grp_hero_name h1 {
+    font-size: 50px;
+  }
+  .antigen_wrap, 
+  .antibody_wrap {
+    width: 32%;
+  }
+  .antibody_root_wrap, .antigen_root_wrap, .antibody_other_root_wrap, .antigen_other_root_wrap {
+    /*height: auto !important;*/    
+    /*width: 97% !important;*/
+  }  
+}
+@media only screen and (max-width: 722px) {
+  .adv-search-col {
+    width: 98%;
+    margin-right: 0px;
+    margin-left: 3%;
+  }
+  .advance-search-button a {
+    margin-left: 3%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .content_block .shortcode_tabs {
+    margin-top: 15%;
+  }
+  .shortcode_tab_item_title {
+    width: 44%;
+  }
+  .search_form {
+    width: 101%;
+  }
+  .search_form_wrap {
+    width: 100.4% !important;
+  }
+  #ih_search_form #search_input {
+    width: 62%;
+  }
+  .search_form form#ih_search_form div.search-select {
+    width: 20%;
+  }  
+  .def_header h1 {
+    font-size: 23px;
+  }
+  .span12 {
+    width: 97%;
+  }
+  /* Footer */
+  .pre_footer {
+    width: 94% !important;
+    padding-left: 3%;
+    padding-right: 3%;
+  } 
+}
+@media only screen and (max-width: 979px) {
+    /* Simple Search */
+  .container {
+    width: 100%;
+  }
+  
+  .shortcode_tab_item_title {    
+    padding: 2% 3% !important;
+    text-align: left;
+  }
+  #ih_search_form {
+    width: 94% !important;
+  }
+  #ih_search_form #search_input {
+    
+    padding: 10px 2%;
+  }
+  #ih_search_form .search_submit_antibody {
+    width: 13% !important;
+    /*background: #ec1a3f url('img/icon/search_red.jpg') no-repeat center !important;*/
+    height: 42px !important;
+  } 
+  #ih_search_form .search_submit_antigen {
+    width: 13% !important;
+    /*background: #00A79D url('img/icon/search_green.jpg') no-repeat center !important;*/
+    height: 42px !important;
+  }
+  .search_form form#ih_search_form select#search_option {
+    padding: 13.989px;
+  }
+  
+  
+  /* Advance Search */
+  .search_form form#ih_search_form #advance_search {
+    font-size:15px;    
+    margin-bottom: 20px;
+  }  
+  .advance-search-button {
+    float: left !important;
+  }  
+  .search_form form#ih_search_form {
+    margin-top: 15px;
+  }
+  /* Header */
+  .def_header {
+    padding: 0px;
+  }
+  .def_header .header-container {
+    width: auto;  
+    padding-left: 3%; 
+    padding-top: 5px; 
+  }
+  .def_header h1 {    
+    margin-top: 5px;
+    line-height: 25px
+  }
+  .def_header h3, .def_header h3 span {
+    font-size: 11px;
+  }
+  
+  
+}
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+  /* Column Width */
+  .column-width-isotope {
+    width: 49%;
+  }
+  /* Advance Search */
+  .content_block .search_form_wrap, 
+  .search_form form#ih_search_form {
+    width: 65% !important;
+  }
+  .adv-search-col {
+    width: 49%;
+    margin-right: 0px;
+  }
+  
+  .antibody-other-header , .antigen-other-header {
+    width: 96.5%;
+  }
+  .def_header {
+    padding-left: 3%;
+  }
+  .def_header .header-container {
+    width: auto;
+  }
+  .antigen_outer_wrap, 
+  .antibody_outer_wrap, 
+  .grid_wrap {
+    width: 45%;    
+    margin-left: 3%;
+  }
+  .antigen_wrap, .antibody_wrap {
+    width: 24.2%;
+  }
+  .expanded, .expand4 {
+    width: 97%;
+  }
+  .expand4 .singleElement {
+    width: 31%;
+    margin-right: 2%;
+  }
+  a.full_expand:before {
+    padding-bottom: 5px;
+  }
+}
